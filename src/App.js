@@ -14,7 +14,7 @@ function App() {
     <Router>
     <div className="App" style={{background: `url(${backgroundImage})`}}> 
       <NavBar />
-      <div className="container">
+      <div className="container mt-3">
         <Switch>
           <Route exact path="/" component={Dasboard} />
           <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />

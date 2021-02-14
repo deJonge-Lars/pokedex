@@ -105,8 +105,11 @@ export default class Pokemon extends Component {
             .toLowerCase()
             .split('-')
             .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-            .join(' ');
-        });
+            .join(', ');
+        })
+        .join(', ');
+
+        
 
         const evs = pokemonRes.data.stats.filter(stat => {
             if (stat.effort > 0) {
@@ -232,7 +235,7 @@ export default class Pokemon extends Component {
                                             <div className="progress">
                                                 <div 
                                                     className="progress-bar"
-                                                    role="progressBar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.hp}%`
                                                     }}
@@ -251,7 +254,7 @@ export default class Pokemon extends Component {
                                             <div className="progress">
                                                 <div 
                                                     className="progress-bar"
-                                                    role="progressBar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.attack}%`
                                                     }}
@@ -270,7 +273,7 @@ export default class Pokemon extends Component {
                                             <div className="progress">
                                                 <div 
                                                     className="progress-bar"
-                                                    role="progressBar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.defense}%`
                                                     }}
@@ -288,8 +291,8 @@ export default class Pokemon extends Component {
                                         <div className="col-12 col-md-9">
                                             <div className="progress">
                                                 <div 
-                                                    className="progress-bar"
-                                                    role="progressBar"
+                                                    class="progress-bar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.speed}%`
                                                     }}
@@ -307,8 +310,8 @@ export default class Pokemon extends Component {
                                         <div className="col-12 col-md-9">
                                             <div className="progress">
                                                 <div 
-                                                    className="progress-bar"
-                                                    role="progressBar"
+                                                    class="progress-bar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.specialAttack}%`
                                                     }}
@@ -326,8 +329,8 @@ export default class Pokemon extends Component {
                                         <div className="col-12 col-md-9">
                                             <div className="progress">
                                                 <div 
-                                                    className="progress-bar"
-                                                    role="progressBar"
+                                                    class="progress-bar"
+                                                    role="progressbar"
                                                     style={{
                                                         width: `${this.state.stats.specialDefense}%`
                                                     }}
